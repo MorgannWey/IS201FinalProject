@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Album Suggestion App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif; 
+      background: #c1c9ff; 
+      color: #fff; 
+      margin: 0;
+      height: 100vh; 
+      display: flex;
+      flex-direction: column; 
+      align-items: center; 
+      justify-content: center;
+      padding-top: 20px;
+    }
+    .back-links {
+      bottom: 20px;
+      text-align: center;
+    }
+    .app {
+      background: #3e55d5; 
+      padding: 20px; 
+      border-radius: 12px; 
+      max-width: 400px; 
+      text-align: center;
+    }
+    h1 {
+      margin-top: 0;
+    }
+    button {
+      background: #c1c9ff; 
+      border: none; 
+      padding: 10px 20px; 
+      color: #3e55d5; 
+      font-size: 16px; 
+      border-radius: 8px; 
+      cursor: pointer;
+    }
+    button:hover {
+      background: #ffffff;
+    }
+    .album {
+      margin-top: 20px;
+    }
+    .album img {
+      max-width: 100%; 
+      border-radius: 8px;
+    }
+    .album-title {
+      font-size: 18px; 
+      font-weight: bold; 
+      margin-top: 10px;
+    }
+    .album-artist {
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <h1>Album Suggestion</h1>
+    <p>Click below to get a random album to listen to today.</p>
+    <button id="suggest">Suggest Album</button>
+    <div class="album" id="album"></div>
+  </div>
+  <br>
+  <br>
+  <div class="back-links">
+    <a href="fromScratchConcerts.html">back to concert page</a> | 
+    <a href="resume.html">back to resumé</a>
+  </div>
+</body>
+  <script>
+    const albums = [
+      {title: 'Rumours', artist: 'Fleetwood Mac', cover: 'https://upload.wikimedia.org/wikipedia/en/f/fb/FMacRumours.PNG'},
+      {title: 'Abbey Road', artist: 'The Beatles', cover: 'https://upload.wikimedia.org/wikipedia/en/4/42/Beatles_-_Abbey_Road.jpg'},
+      {title: 'Melodrama', artist: 'Lorde', cover: 'https://upload.wikimedia.org/wikipedia/en/b/b2/Lorde_-_Melodrama.png'},
+      {title: 'Thriller', artist: 'Michael Jackson', cover: 'https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png'},
+      {title: 'The Dark Side of the Moon', artist: 'Pink Floyd', cover: 'https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png'},
+      {title: '1989', artist: 'Taylor Swift', cover: 'https://upload.wikimedia.org/wikipedia/en/f/f6/Taylor_Swift_-_1989.png'},
+      {title: 'Nevermind', artist: 'Nirvana', cover: 'https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg'},
+      {title: 'Channel Orange', artist: 'Frank Ocean', cover: 'https://upload.wikimedia.org/wikipedia/en/2/28/Channel_ORANGE.jpg'},
+    ];
+
+    document.getElementById('suggest').addEventListener('click', () => {
+      const album = albums[Math.floor(Math.random() * albums.length)];
+      document.getElementById('album').innerHTML = `
+        <img src="${album.cover}" alt="${album.title} cover">
+        <div class="album-title">${album.title}</div>
+        <div class="album-artist">${album.artist}</div>
+      `;
+    });
+  </script>
+</html>
+
+<!-- What I added on to the webapp that AI didn't give me: the links at the bottom, centered nicely, more albums into the list (compiled with the help of Chat), and color -->

@@ -1,0 +1,68 @@
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: rgb(0, 0, 0);
+}
+
+h3 {
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+h6 {
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+}
+
+li {
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+.float_right {
+    float: right;
+}
+
+.container {
+    margin: 100px auto;
+    width: 75%;
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.464);
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../assets/gradientBackground.avif);
+    background-repeat: no-repeat;
+    background-size: 500%;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.filledIn {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border: 1px;
+    border-radius: 5px;
+}
+
+.centered {
+    text-align: center;
+}
+
+.blue-text {
+    color: rgb(30, 0, 255)
+}
+
+.alignBottom {
+    padding-bottom: 2px;
+}
+
+/* NOTE: The video project directions said don't edit the Bootstrap CSS, 
+but Prof Asante showed me how to when I came to him with a question 
+so I did edit mine. I use styles from my custom CSS page on both the 
+professional bootstrap pages and the from scratch html page. */
